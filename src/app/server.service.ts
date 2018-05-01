@@ -16,7 +16,6 @@ export class ServerService {
   }
 
   getCVEData(CVEcollection): Observable<any> {
-    // console.log('http://localhost:9090/' + CVEcollection);
     this.id = CVEcollection.split('-')[1];
     return this.http.get('http://localhost:9090/' + this.id);
   }
